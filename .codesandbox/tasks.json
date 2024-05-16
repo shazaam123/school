@@ -2,11 +2,17 @@
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "command": "python -m manage runserver",
-      "name": "p"
+      "name": "p",
+      "command": "pip install -r requirements.txt"
     }
   ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
-  "tasks": {}
+  "tasks": {
+    "python -m manage runserver": {
+      "name": "python -m manage runserver",
+      "command": "python -m manage runserver",
+      "runAtStart": true
+    }
+  }
 }
